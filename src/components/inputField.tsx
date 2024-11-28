@@ -5,7 +5,7 @@ interface InputFieldProps {
     placeholder: string;
     value: string;
     onChangeText: (text: string) => void;
-    secureTextEntry?: boolean; // Para senha opcionalmente
+    secureTextEntry?: boolean;
 }
 
 export default function InputField({

@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, TextInput, Button} from 'react-native'
+import {View, Text, StyleSheet } from 'react-native'
 import {useRouter} from "expo-router";
 import InputField from "@/src/components/inputField";
 import ImageButton from "@/src/components/imageButton";
@@ -14,7 +14,8 @@ export  default function Login() {
     const router = useRouter();
 
   const handleLogin = () => {
-    if (username === 'Admin' && password === 'teste123') {
+    if ((username === 'Admin' && password === 'teste123') ||
+        (username === 'fulano' && password === '123456')){
       setError('');
       router.push("/listagem");
     } else {
@@ -40,9 +41,9 @@ export  default function Login() {
             />
           {error ? <Text style={styles.error}>{error}</Text> : null}
             <ImageButton
-                source={loginIcon} // Substitua pela sua URL ou imagem local
+                source={loginIcon}
                 onPress={handleLogin}
-                width={100} // Personalizando tamanho do botão
+                width={100}
                 height={100}
             />
         </View>

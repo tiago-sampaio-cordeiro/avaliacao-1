@@ -2,17 +2,17 @@ import React from "react";
 import { Pressable, Image, StyleSheet, ImageSourcePropType } from "react-native";
 
 interface ImageButtonProps {
-    source: ImageSourcePropType; // Imagem a ser exibida
-    onPress: () => void; // Evento disparado ao pressionar o botão
-    width?: number; // Largura personalizada (opcional)
-    height?: number; // Altura personalizada (opcional)
+    source: ImageSourcePropType;
+    onPress: () => void;
+    width?: number;
+    height?: number;
 }
 
 export default function ImageButton({
                                         source,
                                         onPress,
-                                        width = 50, // Valor padrão para largura
-                                        height = 50, // Valor padrão para altura
+                                        width = 50,
+                                        height = 50,
                                     }: ImageButtonProps) {
     return (
         <Pressable onPress={onPress} style={styles.button}>

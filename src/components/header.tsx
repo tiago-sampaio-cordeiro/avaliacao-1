@@ -4,7 +4,7 @@ import { useActionSheet } from "@expo/react-native-action-sheet";
 import { useRouter } from "expo-router";
 
 interface HeaderProps {
-    title: string; // O título do cabeçalho
+    title: string;
 }
 
 export default function Header({ title }: HeaderProps) {
@@ -12,20 +12,21 @@ export default function Header({ title }: HeaderProps) {
     const router = useRouter();
 
     const openMenu = () => {
-        const options = ["Sobre", "Logout", "Cancelar"];
-        const destructiveButtonIndex = 1; // Logout em vermelho
-        const cancelButtonIndex = 2; // Botão Cancelar
+        const options = ["Sobre", "Logout", "Cancelar", "Listagem"];
+        const destructiveButtonIndex = 1;
+        const cancelButtonIndex = 2;
 
         showActionSheetWithOptions(
             { options, destructiveButtonIndex, cancelButtonIndex },
             (selectedIndex) => {
                 if (selectedIndex === 0) {
-                    // Navegar para a tela Sobre
                     router.push("/sobre");
                 } else if (selectedIndex === 1) {
-                    // Logout: Remover a pilha de navegação e voltar ao Login
                     router.replace("/");
+                } else if (selectedIndex === 3) {
+                    router.push("/listagem");
                 }
+
             }
         );
     };

@@ -4,7 +4,7 @@ import Header from "../components/header";
 
 export default function Sobre() {
     const handleOpenGitHub = () => {
-        Linking.openURL("https://github.com/tiago-sampaio-cordeiro"); // Substitua pelo seu link do GitHub
+        Linking.openURL("https://github.com/tiago-sampaio-cordeiro/avaliacao-1"); // Substitua pelo seu link do GitHub
     };
 
     return (

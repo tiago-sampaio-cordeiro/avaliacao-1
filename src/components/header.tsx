@@ -12,7 +12,7 @@ export default function Header({ title }: HeaderProps) {
     const router = useRouter();
 
     const openMenu = () => {
-        const options = ["Sobre", "Logout", "Cancelar", "Listagem"];
+        const options = ["Sobre", "Logout", "Cancelar"];
         const destructiveButtonIndex = 1;
         const cancelButtonIndex = 2;
 
